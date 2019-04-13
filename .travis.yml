@@ -4,6 +4,7 @@ node_js:
 script:
  - echo "Deploy!!"
 install:
+  - npm install firebase-functions@latest firebase-admin@latest --save
   - npm install -g firebase-tools
 after_success:
   - firebase deploy --project "lsc-webapp" --token $FIREBASE_TOKEN
